@@ -1,0 +1,10 @@
+drop database trader;
+
+create database trader;
+
+create table users (userid int unsigned NOT NULL AUTO_INCREMENT, username varchar(
+255) NOT NULL, password varchar(255) NOT NULL, level int not null, email varchar(255), firstname varchar(255), lastname varchar(255), PRIMARY KEY (userid));
+
+insert into users (username, password, level, email, firstname, lastname) values ("zacharym", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "1", "ZacharyM@accelentertainment.com", "Zach", "Maggio");
+insert into users (username, password, level, email, firstname, lastname) values ("georgeb", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "1", "GeorgeB@accelentertainment.com", "George", "Beck");
+
