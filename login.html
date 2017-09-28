@@ -5,12 +5,28 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
 </head>
 
 <body>
-<div id="loginbox"></div>
+<div id="outer">
+	<div class="centeredhv" id="loginbox">
+		<div id="loginform">
+			<form action="php_files/login.php">
+				<div class="login">
+					<label> <b> Username: </b> </label>
+					<input type="text" placeholder="Enter Username" name="username" required>
+				</div>
+				<div class="login">
+					<label> <b> Password: </b> </label>
+					<input type="password" placeholder="Enter Password" name ="password" required>
+				</div>
+				<div class="loginbtn">			
+					<button type="submit">Login</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 </body>
-
-
-
 </html>
