@@ -16,13 +16,20 @@ html, body {
 	width:100%; 
 	height: 100%;
 }
-
-body {
+body{
+	background: linen;
+	
+}
+div#moneywrap {
 	background-image: url("res/cashmoney.jpg");
 	background-size: 100% 100%;
     background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
 }
-
+.styledtext {
+	font-family: 'Orbitron', sans-serif;
+}
 div#outer{
 	width: 100%;
 	height: 100%;
