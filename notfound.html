@@ -1,28 +1,26 @@
-<?php
-	include 'php_files/functions.php';
-	echo "hello";
+<?php 
+	include 'functions.php';
 	session_start();
 	clearSessionBools();
 	if(isset($_SESSION['usr']) && isset($_SESSION['pswd'])){
 		//user logged in proceed
-		
 	}else{
 		//not logged in, redirect to login
-		header("Location: login.html");
+		header("Location: ../login.html");
 		exit();
 	}
 ?>
 
 
+<!DOCTYPE html>
 <html>
-<head>
-
-</head>
-
+	<head>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	</head>
+	
 <body>
-<div>Home</div>
+	
+	<div>Page Not Found</div>
+		
 </body>
-
-
-
 </html>
