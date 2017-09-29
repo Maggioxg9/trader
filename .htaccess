@@ -4,3 +4,7 @@ AddHandler php5-script .php .html .htm
 
 ErrorDocument 404 /notfound.html
 
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^\d+\.
+RewriteRule (.*) http://zembrella.com/$1 [R=301]
