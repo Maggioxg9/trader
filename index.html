@@ -3,23 +3,52 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<script>
+		function populateCatalog(){
+			var catalogDiv= document.getElementById("catalog");
+				for(i=0; i<8; i++){
+					var divrow=document.createElement("div");
+					divrow.setAttribute('class', "catarow");
+					
+					var divblockleft = document.createElement("div");
+					divblockleft.setAttribute('class', "catablock");
+					divrow.appendChild(divblockleft);
+					
+					var divblockright = document.createElement("div");
+					divblockright.setAttribute('class', "catablock");
+					divrow.appendChild(divblockright);
+					
+					catalogDiv.appendChild(divrow);
+				}
+					
+		}
+	</script>
 </head>
 
 <body>
-<div>
+<div id="imgwrap">
 	<img src="GElogo.jpg"></img>
-<div>
+</div>
 <div id="navbar">
-<ul>
-	<li>Men</li>
-	<li>Women</li>
-	<li>Kids</li>
-</ul>
+	<ul>
+		<li>Men</li>
+		<li>Women</li>
+		<li>Kids</li>
+	</ul>
 </div>
 <div id="catalogwrap">
+	<div id="greeting">
+		<h2>Need a quick gift idea for a guy? No problem, we've went ahead and found some of the top Amazon gift ideas for you to look at. </h2>
+	</div>
+	<div id="catalog">
+	</div>
 </div>
-
-</div>
+<script>
+populateCatalog();
+</script>
 </body>
 
 

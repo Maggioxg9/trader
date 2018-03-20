@@ -13,9 +13,14 @@ html, body {
 	height: 100%;
 }
 body{
-	background: white;
+	background: #eff6fc;
 	
 }
+div#imgwrap{
+	
+	background-color: white;
+}
+
 img{
 	width: 240px;
 	margin-left: 20%;
@@ -25,7 +30,7 @@ div#navbar{
 	font-family: 'Rubik', sans-serif;
 	border-top: .5pt solid black;
 	color: black;
-	background-color: #1C86EE;
+	background-color: #0069ff;
 	font-weight: bold;
 	font-size: 20pt;
 }
@@ -43,12 +48,30 @@ li{
 	
 }
 li:hover{
-	background-color: floralwhite;
+	background-color: white;
 	cursor: pointer;
 }
 div#catalogwrap {
-	height: 800px;
-	width: 60%;
+	width: 1245px;
 	margin: auto;
-	background-color: floralwhite;
+	background-color: white;
 }
+div#greeting{
+	height: 150px;
+	padding: 30px;
+}
+div.catarow{
+	width: 100%;
+	height: 520px;
+}
+div.catablock{
+	border: .5pt solid grey;
+	border-radius: 6px;
+	width: 600px;
+	height: 480px;
+	margin-top: 20px;
+	margin-left: 15px;
+	display: inline-block;
+}
+
+	
