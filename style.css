@@ -29,7 +29,6 @@ img{
 div#navbar{
 	font-family: 'Rubik', sans-serif;
 	border-top: .5pt solid black;
-	color: black;
 	background-color: #0069ff;
 	font-weight: bold;
 	font-size: 20pt;
@@ -44,17 +43,18 @@ ul {
 li{
 	display: inline-block;
 	background-color: limegreen;
+	color: white;
 	width: 150px;
 	
 }
 li:hover{
 	background-color: white;
 	cursor: pointer;
+	color:black;
 }
 div#catalogwrap {
 	width: 1245px;
 	margin: auto;
-	background-color: white;
 }
 div#greeting{
 	height: 150px;
@@ -72,6 +72,7 @@ div.catablock{
 	margin-top: 20px;
 	margin-left: 15px;
 	display: inline-block;
+	background-color: white;
 }
 
 	
