@@ -3,8 +3,6 @@ AddHandler php-script .php .html
 AddHandler php5-script .php .html .htm
 
 
-ErrorDocument 404 http://zembrella.com
-
 <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteBase /
@@ -19,4 +17,6 @@ ErrorDocument 404 http://zembrella.com
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteRule ^(.*)$ /index.html/$1 [L]
 </IfModule>
+
+ErrorDocument 404 http://zembrella.com
 
