@@ -1,9 +1,7 @@
 * {
 	box-sizing: border-box;
 }
-*:focus {
-    outline: none;
-}
+
 a{
 	text-decoration:none;
 	
@@ -17,91 +15,42 @@ html, body {
 	height: 100%;
 }
 body{
-	background: linen;
+	background: white;
 	
 }
-div#moneywrap {
-	background-image: url("res/cashmoney.jpg");
-	background-size: 100% 100%;
-    background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
+img{
+	width: 240px;
+	margin-left: 20%;
+	height: auto;
 }
-.styledtext {
-	font-family: 'Orbitron', sans-serif;
-}
-div#outer{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.centeredhv{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-div#loginbox {
-	width: 600px;
-	height: 400px;
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGRlZnM+CgkJPHBhdHRlcm4gaWQ9J3RpbGUnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHdpZHRoPSc3NScgaGVpZ2h0PSc3NScgdmlld0JveD0nMCAwIDUwIDUwJz4KCQkJPGxpbmUgeDE9JzEnIHkxPScwJyB4Mj0nNTEnIHkyPSc1MCcgc3Ryb2tlPScjZjcwZjBmJyBzdHJva2Utd2lkdGg9JzAnLz4KCQkJPGxpbmUgeDE9JzQ5JyB5MT0nMCcgeDI9Jy0xJyB5Mj0nNTAnIHN0cm9rZT0nI2Y3MGYwZicgc3Ryb2tlLXdpZHRoPScwJy8+CgkJCTxsaW5lIHgxPSc1MCcgeTE9JzAnIHgyPScwJyB5Mj0nNTAnIHN0cm9rZT0nIzA1MWZkYicgc3Ryb2tlLXdpZHRoPScwJy8+CgkJCTxsaW5lIHgxPScwJyB5MT0nMCcgeDI9JzUwJyB5Mj0nNTAnIHN0cm9rZT0nIzA1MWZkYicgc3Ryb2tlLXdpZHRoPScwJy8+CgkJPC9wYXR0ZXJuPgoJCTxyYWRpYWxHcmFkaWVudCBpZD0nbCcgY3g9JzUwJScgY3k9JzIwMCUnIGZ5PScwJyByPScyMDElJz4KCQkJPHN0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6I2ZmZjsgc3RvcC1vcGFjaXR5Oi4xOycgLz4KCQkJPHN0b3Agb2Zmc2V0PScxMCUnIHN0eWxlPSdzdG9wLWNvbG9yOiMwMDA7IHN0b3Atb3BhY2l0eTowLjE7JyAvPgoJCQk8c3RvcCBvZmZzZXQ9JzMwJScgc3R5bGU9J3N0b3AtY29sb3I6IzAwMDsgc3RvcC1vcGFjaXR5OjAuMzsnIC8+CgkJCTxzdG9wIG9mZnNldD0nOTAlJyBzdHlsZT0nc3RvcC1jb2xvcjojMDAwOyBzdG9wLW9wYWNpdHk6MC41NTsnIC8+CgkJCTxzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3AtY29sb3I6IzAwMDsgc3RvcC1vcGFjaXR5Oi42JyAvPgoJCTwvcmFkaWFsR3JhZGllbnQ+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjOGU4ZThlJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJy8+Cgk8cmVjdCBmaWxsPSd1cmwoI3RpbGUpJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJy8+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2wpJy8+Cjwvc3ZnPg==);
-	color: gold;
-	border-radius: 20px;
-	border: 5px solid gold;
-}
-
-.login input[type=text], input[type=password]{
-	margin-bottom: .25em;
-	padding:.25em;
-	font-size: .75em;
-	width: 280px;
-	background-color: #29201D;
-	color: gold;
-	font-family: 'Orbitron', sans-serif;
-	border-color: darkgrey;
-	border-radius: 5px;
-}
-div.loginbtn{
-	padding-top: 40px;
-	display: flex;
-	justify-content: center;
-}
-
-div.loginbtn  button{
-	border: none;
-	color: white;
-	font-family: 'Orbitron', sans-serif;
-	background:none;
-	background-size: 100% 100%;
-    background-repeat: no-repeat;
-	background-image: url("res/goldbar.png");
-    text-align: center;
-    text-decoration: none;
-	padding-top: 20px;
-    display: inline-block;
-    font-size: 28px;
+div#navbar{
+	font-family: 'Rubik', sans-serif;
+	border-top: .5pt solid black;
+	color: black;
+	background-color: #1C86EE;
 	font-weight: bold;
-	height: 71px;
-	width: 201px;
+	font-size: 20pt;
+}
+ul {
+	text-align: center;
+	list-style-type: none;
+	margin:0;
+	padding-left: 0;
 	
 }
-div.loginbtn  button:hover{
-	color: blue;
-	cursor: pointer;
-	transform: translate(1px, 3px);
-}
-div.login{
-	padding: 5px;
-	
-}
-div#loginform{
-	font-size: 32px;
-	
-}
-label{
+li{
 	display: inline-block;
-	font-family: 'Orbitron', sans-serif;
-	width: 195px;
-	text-shadow: 3px 2px #000000;
+	background-color: limegreen;
+	width: 150px;
+	
+}
+li:hover{
+	background-color: floralwhite;
+	cursor: pointer;
+}
+div#catalogwrap {
+	height: 800px;
+	width: 60%;
+	margin: auto;
+	background-color: floralwhite;
 }
