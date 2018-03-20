@@ -126,4 +126,6 @@ $recaptchaResponse->errorCodes = $answers [error-codes];
 return $recaptchaResponse;
 }
 }
+	header("Location: ../index.html");
+	exit();
 ?>
