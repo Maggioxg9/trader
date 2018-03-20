@@ -10,4 +10,4 @@ AddHandler php5-script .php .html .htm
 </IfModule>
 
 ErrorDocument 404 http://zembrella.com
-
+ErrorDocument 403 httpL://zembrella.com
