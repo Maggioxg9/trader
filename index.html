@@ -3,6 +3,7 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Contrail One' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -33,11 +34,25 @@
 					desc.setAttribute("class", "description");
 					desc.innerHTML="The epitome of being lazy, let Alexa do everything for you through the echo dot smart device. Capable of making you rich, let Alex play the stock market and make all the right decisions for you. The best part? YES, its spying on you at all times and sending your data through amazon!";
 					
+					var btnwrap = document.createElement("div");
+					btnwrap.setAttribute("class", "buybtnwrap");
+					var buybtn = document.createElement("button");
+					buybtn.setAttribute("class", "buybtn");
+					buybtn.innerHTML="$50 on Amazon";
+					
+					var btnlink = document.createElement("a");
+					btnlink.setAttribute("target", "_blank");
+					btnlink.setAttribute("href", "https://www.amazon.com/gp/product/B01DFKC2SO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01DFKC2SO&linkCode=as2&tag=giftexamples-20&linkId=e5fb7436ce8737cb1d14929c8439bf85");
+					
 					
 					link.appendChild(img);
+					
+					btnlink.appendChild(buybtn);
+					btnwrap.appendChild(btnlink);
 					divblock.appendChild(title);
 					divblock.appendChild(link);
 					divblock.appendChild(desc);	
+					divblock.appendChild(btnwrap);
 					divrow.appendChild(divblock);
 					catalogDiv.appendChild(divrow);
 				}
@@ -51,11 +66,7 @@
 	<img id="logo" src="GElogo.jpg"></img>
 </div>
 <div id="navbar">
-	<ul>
-		<li>Men</li>
-		<li>Women</li>
-		<li>Kids</li>
-	</ul>
+	<button class="pagebtn"  onclick="openPage('menstab', this)"><span class="menutext">Men</span></button><button class="pagebtn"  onclick="openPage('womenstab', this)"><span class="menutext">Women</span></button><button class="pagebtn"  onclick="openPage('kidsstab', this)"><span class="menutext">Kids</span></button>
 </div>
 
 <div id="catalogwrap">
