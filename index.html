@@ -2,6 +2,7 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -11,23 +12,33 @@
 			var catalogDiv= document.getElementById("catalog");
 				for(i=0; i<8; i++){
 					var divrow=document.createElement("div");
-					divrow.setAttribute('class', "catarow");
-					var divblockleft = document.createElement("div");
-					divblockleft.setAttribute('class', "catablock");
+					divrow.setAttribute("class", "catarow");
+					
+					var divblock = document.createElement("div");
+					divblock.setAttribute("class", "catablock");
+					
+					var title=document.createElement("div");
+					title.setAttribute("class", "itemtitle");
+					title.innerHTML = "Amazon Echo Dot";
+					
 					var link = document.createElement("a");
 					link.setAttribute("target", "_blank");
 					link.setAttribute("href", "https://www.amazon.com/gp/product/B01DFKC2SO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01DFKC2SO&linkCode=as2&tag=giftexamples-20&linkId=e5fb7436ce8737cb1d14929c8439bf85");
+					
 					var img = document.createElement("img");
 					img.setAttribute("src", "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01DFKC2SO&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=giftexamples-20");
 					img.setAttribute("class", "center");
+					
+					var desc = document.createElement("div");
+					desc.setAttribute("class", "description");
+					desc.innerHTML="The epitome of being lazy, let Alexa do everything for you through the echo dot smart device. Capable of making you rich, let Alex play the stock market and make all the right decisions for you. The best part? YES, its spying on you at all times and sending your data through amazon!";
+					
+					
 					link.appendChild(img);
-					divblockleft.appendChild(link);
-					divrow.appendChild(divblockleft);
-					
-					var divblockright = document.createElement("div");
-					divblockright.setAttribute('class', "catablock");
-					divrow.appendChild(divblockright);
-					
+					divblock.appendChild(title);
+					divblock.appendChild(link);
+					divblock.appendChild(desc);	
+					divrow.appendChild(divblock);
 					catalogDiv.appendChild(divrow);
 				}
 					
@@ -49,7 +60,7 @@
 
 <div id="catalogwrap">
 	<div id="greeting">
-		<h2>Need a quick gift idea for a guy? No problem, we've went ahead and found some of the top Amazon gift ideas for you to look at. </h2>
+		Popular gift ideas of 2018
 	</div>
 	<div id="catalog">
 	</div>
