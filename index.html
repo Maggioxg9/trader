@@ -1,3 +1,17 @@
+<? php
+
+
+
+
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +24,7 @@
 
 	<script>
 		function populateCatalog(){
-			var catalogDiv= document.getElementById("catalog");
+			var catalogDiv= document.getElementById("menstab");
 				for(i=0; i<8; i++){
 					var divrow=document.createElement("div");
 					divrow.setAttribute("class", "catarow");
@@ -62,23 +76,74 @@
 </head>
 
 <body>
-<div id="imgwrap">
-	<img id="logo" src="GElogo.jpg"></img>
-</div>
-<div id="navbar">
-	<button class="pagebtn"  onclick="openPage('menstab', this)"><span class="menutext">Men</span></button><button class="pagebtn"  onclick="openPage('womenstab', this)"><span class="menutext">Women</span></button><button class="pagebtn"  onclick="openPage('kidsstab', this)"><span class="menutext">Kids</span></button>
-</div>
+	<div id="imgwrap">
+		<img id="logo" src="GElogo.jpg"></img>
+	</div>
+	<div id="navbar">
+		<button id="defaultbutton" class="pagebtn" onclick="openPage('menstab', this, 'mentext')"><span id="mentext" class="menutext">Men</span></button><button class="pagebtn"  onclick="openPage('womenstab', this, 'womentext')"><span id="womentext" class="menutext">Women</span></button><button class="pagebtn"  onclick="openPage('kidsstab', this, 'kidtext')"><span id="kidtext" class="menutext">Kids</span></button>
+	</div>
 
-<div id="catalogwrap">
-	<div id="greeting">
-		Popular gift ideas of 2018
+	<div id="catalogwrap">
+		<div id="greeting">
+			Popular Gift Ideas of 2018
+		</div>
+		<div class="tabcontent" id="menstab">
+		</div>
+		<div class="tabcontent" id="womenstab">
+		</div>
+		<div class="tabcontent" id="kidsstab">
+		</div>
+		<div class="tabcontent" id="abouttab">
+		</div>
+		<div class="tabcontent" id="privacytab">
+		</div>
+		<div class="tabcontent" id="termstab">
+		</div>
 	</div>
-	<div id="catalog">
+	<div class="footer">
+		<div style="margin-bottom:5px;">
+			<button class="footerbtn" onclick="openPage('abouttab')"><span class="footerbtntext">About Us</span></button>
+			<button class="footerbtn" onclick="openPage('privacytab')"><span class="footerbtntext">Privacy Policy</span></button>
+			<button class="footerbtn" onclick="openPage('termstab')"><span class="footerbtntext">Terms of Use</span></button>
+		</div>
+		<span class="disclaimertext">We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</span>
 	</div>
-</div>
-<script>
-populateCatalog();
-</script>
+	<script>
+		populateCatalog();
+	</script>
+	<script>
+		function openPage(pageName,elmnt,spanElmnt) {
+			var i, tabcontent, tablinks, spantexts;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("pagebtn");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].style.backgroundColor = "limegreen";					
+				tablinks[i].style.backgroundColor = "";
+			}
+			spantexts=document.getElementsByClassName("menutext");
+			for (i=0; i<spantexts.length; i++){
+				spantexts[i].style.color = "";
+			}
+			document.getElementById(pageName).style.display = "block";
+			if(elmnt){
+				elmnt.style.backgroundColor = "#eff6fc";
+			}
+			if(spanElmnt){
+				document.getElementById(spanElmnt).style.color="black";
+			}
+			if(pageName=='privacytab'){
+				var gr = document.getElementById('greeting');
+				gr.style.font-weight = "bold";
+				gr.innerHTML = "
+			}
+				
+		}
+		// Get the element with id="defaultbutton" and click on it
+		document.getElementById("defaultbutton").click();
+	</script>
 </body>
 
 
