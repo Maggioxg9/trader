@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Contrail One' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -80,7 +81,7 @@
 		<img id="logo" src="GElogo.jpg"></img>
 	</div>
 	<div id="navbar">
-		<button id="defaultbutton" class="pagebtn" onclick="openPage('menstab', this, 'mentext')"><span id="mentext" class="menutext">Men</span></button><button class="pagebtn"  onclick="openPage('womenstab', this, 'womentext')"><span id="womentext" class="menutext">Women</span></button><button class="pagebtn"  onclick="openPage('kidsstab', this, 'kidtext')"><span id="kidtext" class="menutext">Kids</span></button>
+		<button  class="pagebtn" onclick="openPage('menstab', this, 'mentext')"><span id="mentext" class="menutext">Men</span></button><button class="pagebtn"  onclick="openPage('womenstab', this, 'womentext')"><span id="womentext" class="menutext">Women</span></button><button class="pagebtn"  onclick="openPage('kidsstab', this, 'kidtext')"><span id="kidtext" class="menutext">Kids</span></button>
 	</div>
 
 	<div id="catalogwrap">
@@ -94,19 +95,40 @@
 		<div class="tabcontent" id="kidsstab">
 		</div>
 		<div class="tabcontent" id="abouttab">
+			<div id="aboutwrap">
+				<div id="aboutimgwrap">
+					<img id="aboutimg" src="aboutme.jpg"></img>
+				</div>
+				<div id="abouttext">
+					Hello, my name is Zach and I built and run this website with my fiancé. I am an IT engineer with a CS degree and enjoy building simple websites in my spare time. How did I come up with this website idea? I frequently ran into problems trying to figure out what gifts to buy for friends and family around the holidays and found myself always looking for ideas on various blogs. Now, I proactively am trying to stay current with interesting gift ideas and am sharing my findings with you all. If you have any comments or feedback, please feel free to contact us at <a href="mailto:giftexamples@gmail.com">giftexamples@gmail.com</a>. Thanks!
+				</div>
+			</div>
 		</div>
 		<div class="tabcontent" id="privacytab">
+			<div id="privacywrap">
+				<h3>Affiliate Program</h3>
+				<p>GiftExamples.com (“us”) are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. </p>
+				<h3>Affiliate Disclosure</h3>
+				<p>In compliance with the FTC guidelines, please assume all links, posts, photos and other material on this website are affiliate links of which GiftExamples.com receives a small commission from sales of certain items, but the price is the same for you. </p>
+				<h3>Data Collection</h3>
+				<p>GiftExamples.com (“us”) does not collect any personally identifiable information. Personally Identifiable Information refers to information that tells us specifically who you are, such as your name, email address, or phone number. </p>
+				<h3>Data Distribution</h3>
+				<p>GiftExamples.com (“we”) does not share personal information with third-parties nor do we store information we collect about your visit to this website for use other than to analyze content performance through the use of cookies, which you can turn off at anytime by modifying your Internet browser's settings. We are not responsible for the republishing of the content found on this website on other Websites or media without our and our Affiliate's permission. </p>
+				<p>This privacy policy is subject to change without notice. </p>
+
+			</div>
 		</div>
 		<div class="tabcontent" id="termstab">
+		
 		</div>
 	</div>
 	<div class="footer">
 		<div style="margin-bottom:5px;">
-			<button class="footerbtn" onclick="openPage('abouttab')"><span class="footerbtntext">About Us</span></button>
+			<button id="defaultbutton" class="footerbtn" onclick="openPage('abouttab')"><span class="footerbtntext">About Us</span></button>
 			<button class="footerbtn" onclick="openPage('privacytab')"><span class="footerbtntext">Privacy Policy</span></button>
-			<button class="footerbtn" onclick="openPage('termstab')"><span class="footerbtntext">Terms of Use</span></button>
+			<button class="footerbtn" onclick="openPage('termstab')"><span class="footerbtntext">Terms and Conditions</span></button>
 		</div>
-		<span class="disclaimertext">We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</span>
+		<span class="disclaimertext">GiftExamples.com ("us") is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</span>
 	</div>
 	<script>
 		populateCatalog();
@@ -136,8 +158,20 @@
 			}
 			if(pageName=='privacytab'){
 				var gr = document.getElementById('greeting');
-				gr.style.font-weight = "bold";
-				gr.innerHTML = "
+				gr.style.fontWeight = "bold";
+				gr.innerHTML = "Privacy Policy";
+			}else if(pageName=='abouttab'){
+				var gr = document.getElementById('greeting');
+				gr.style.fontWeight = "bold";
+				gr.innerHTML = "About Us";
+			}else if(pageName=='termstab'){
+				var gr = document.getElementById('greeting');
+				gr.style.fontWeight = "bold";
+				gr.innerHTML = "Terms and Conditions";
+			}else{
+				var gr = document.getElementById('greeting');
+				gr.style.fontWeight = "normal";
+				gr.innerHTML = "Popular Gift Ideas of 2018";
 			}
 				
 		}
