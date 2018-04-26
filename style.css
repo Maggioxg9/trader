@@ -1,6 +1,6 @@
+
 a{
 	text-decoration:none;
-	
 }
 html {
 	height: 100%;
@@ -20,17 +20,21 @@ body{
 }
 div#imgwrap{
 	background-color: white;
+	margin:0;
+	padding:0;
+	height: 89px;
 }
+
 img#logo{
 	width: 240px;
-	margin-left: 20%;
-	height: auto;
+	margin-left: 260px;
 }
 div#navbar{
 	border-top: 5pt solid #0069ff;
 	background-color: #0069ff;
 	height: 32px;
 	text-align: center;
+	box-sizing: content-box !important;
 }
 button.pagebtn{
 	margin:0;
@@ -169,6 +173,19 @@ div#privacywrap{
 	font-family: Ariel, sans-serif;
 	font-size: 16px;
 }
+div#termswrap{
+	margin: auto;
+	margin-bottom: 40px;
+	width: 900px;
+	background-color: white;
+	border-radius: 6px;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: Ariel, sans-serif;
+	font-size: 16px;
+}
 div.footer{
 	position: absolute;
 	left: 0;
@@ -200,4 +217,10 @@ button.footerbtn:hover{
 span.disclaimertext{
 	font-size: 11px;
 	font-style: italic;
+}
+div#loginwrap{
+	width: 500px;
+	margin: auto;
+	padding: 20px;
+	padding-top: 100px;
 }
