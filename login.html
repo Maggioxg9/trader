@@ -1,14 +1,12 @@
 <? php
+		session_start();
 
-
-
+	if($_SESSION['adminmode']!="true"){
+		
+	}
 
 
 ?>
-
-
-
-
 
 
 
@@ -32,6 +30,15 @@
 	<div id="navbar">
 	</div>
 	<div id="loginwrap">
+		<div id="loginmsg">
+			<?php if(isset($_SESSION['badlogin'])){
+						if($_SESSION['badlogin']==true){
+							echo "Invalid Login, please try again";
+						}
+						unset($_SESSION['badlogin']);
+					}
+					?>
+		</div>
 		<div class="container-fluid">
 			<form class="form-horizontal" action="login.php" method="post">
 				<div class="form-group">

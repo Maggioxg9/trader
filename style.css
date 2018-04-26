@@ -224,3 +224,10 @@ div#loginwrap{
 	padding: 20px;
 	padding-top: 100px;
 }
+div#loginmsg{
+	width: 500px;
+	margin: auto;
+	padding: 10px;
+	font-weight: bold;
+	font-style: italic;
+}
